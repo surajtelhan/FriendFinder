@@ -1,48 +1,48 @@
   var friendsArray = [{
-    "name": "Ahmed",
-    "photo": "https://picsum.photos/200/300/?random",
+    "name": "Darth Vader",
+    "photo": "https://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=0%2C23%2C1400%2C785&width=960",
     "scores": [
-        5,
-        4,
-        5,
-        4,
-        5,
-        4,
-        5,
-        4,
-        5,
-        4
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
     ]
 },
 {
-    "name": "Spurrious Sword",
-    "photo": "https://picsum.photos/200/300/?random",
+    "name": "Yoda",
+    "photo": "https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest?cb=20150206140125",
     "scores": [
-        1,
-        2,
-        1,
-        2,
-        1,
-        2,
-        1,
-        2,
-        1,
-        2
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
     ]
 },{
-    "name": "Dolly Candleholder",
-    "photo": "https://picsum.photos/200/300/?random",
+    "name": "Qui-Gon Jinn",
+    "photo": "https://upload.wikimedia.org/wikipedia/en/a/ad/Qui-Gon_Jinn.png",
     "scores": [
-        4,
         3,
-        2,
-        4,
         3,
-        2,
-        4,
         3,
-        2,
-        4
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
     ]
 }];
 

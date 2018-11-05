@@ -1,9 +1,6 @@
 var router = require("express").Router();
 var friends = require("../data/friends");
 
-
-// Create a function to check results
-//---------------------------------------------------------
 function compareVals(in1, in2) {
     var compareResults;
     var delta = parseInt(in1) - parseInt(in2);
@@ -14,17 +11,10 @@ function compareVals(in1, in2) {
     }
     return compareResults;
 }
-
-
-// Return the json formatted data 
-//---------------------------------------------------------
 router.get("/friends", function (req, res) {
     return res.json(friends);
 });
 
-
-// Process the data from the user submission
-//---------------------------------------------------------
 router.post("/friends", function (req, res) {
     var newEntry = req.body;
 
@@ -44,8 +34,6 @@ router.post("/friends", function (req, res) {
         var finalScore = parseInt(cmpQ1) + parseInt(cmpQ2) + parseInt(cmpQ3) + parseInt(cmpQ4) + parseInt(cmpQ5) + parseInt(cmpQ6) + parseInt(cmpQ7) + parseInt(cmpQ8) + parseInt(cmpQ9) + parseInt(cmpQ10);
 
 
-// If you get a perfect match, push it into the array
-//---------------------------------------------------------
         if (finalScore === 0) {
             var match = {
                 "name": friends[index].name,
@@ -56,9 +44,6 @@ router.post("/friends", function (req, res) {
             bestMatch.push(match);
         }
 
-
-// If there's no entry, this becomes the best match
-//---------------------------------------------------------
         else if (bestMatch.length < 1) {
             var match = {
                 "name": friends[index].name,
@@ -68,10 +53,6 @@ router.post("/friends", function (req, res) {
             bestMatch.pop();
             bestMatch.push(match);
         }
-
-
-// Check to see if the current entry is a better match
-//---------------------------------------------------------
         else if (parseInt(finalScore) < parseInt(bestMatch[0].final)) {
             var match = {
                 "name": friends[index].name,
@@ -83,15 +64,9 @@ router.post("/friends", function (req, res) {
         }
     }
 
-
-// Return the contents of the best match when done
-//---------------------------------------------------------
     if (bestMatch.length > 0) {
         res.json(bestMatch[0]);
     }
 });
 
-
-// Make router available to server
-//---------------------------------------------------------
 module.exports = router;
